@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C2E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tøyen stasjon"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Velg holdeplass"
+            android:textColor="#99AABB"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Search field -->
+        <EditText
+            android:id="@+id/search_field"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Søk etter holdeplass..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#666688"
+            android:background="@drawable/field_background"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:layout_marginBottom="4dp"/>
+
+        <ProgressBar
+            android:id="@+id/loading_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="#3D9BE9"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Results list (Ruter card style) -->
+        <ListView
+            android:id="@+id/search_results"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:divider="#2A2A3D"
+            android:dividerHeight="1dp"
+            android:background="#2A2A3D"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Selected stop -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/row_background"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Valgt holdeplass"
+                android:textColor="#99AABB"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/selected_stop_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingen valgt"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Max departures -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Antall avganger"
+            android:textColor="#99AABB"
+            android:textSize="12sp"
+            android:layout_marginBottom="6dp"/>
+
+        <Spinner
+            android:id="@+id/max_departures_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/field_background"
+            android:popupBackground="#2A2A3D"
+            android:paddingStart="14dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Save button — Ruter blue -->
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Lagre"
+            android:enabled="false"
+            android:backgroundTint="#3D9BE9"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+</ScrollView>

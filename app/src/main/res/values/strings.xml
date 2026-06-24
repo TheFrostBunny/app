@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BussWidget</string>
+    <string name="widget_small_desc">Liten buss-widget (2×1) – viser neste avgang</string>
+    <string name="widget_medium_desc">Medium buss-widget (4×1) – viser 2 avganger</string>
+    <string name="widget_large_desc">Stor buss-widget (4×2) – viser 4 avganger</string>
+</resources>

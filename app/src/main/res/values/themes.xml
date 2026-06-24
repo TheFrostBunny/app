@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BussWidget" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#3D9BE9</item>
+        <item name="colorPrimaryVariant">#2A7ACC</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">#1C1C2E</item>
+        <item name="android:statusBarColor">#1C1C2E</item>
+        <item name="android:navigationBarColor">#1C1C2E</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#99AABB</item>
+    </style>
+</resources>

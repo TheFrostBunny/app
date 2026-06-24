@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/widget_stop_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Tøyen stasjon" />
+
+    <!-- Row 1 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical"
+        android:background="@drawable/row_background" android:layout_marginTop="5dp"
+        android:paddingStart="8dp" android:paddingEnd="8dp"
+        android:paddingTop="3dp" android:paddingBottom="3dp">
+        <TextView android:id="@+id/row1_line" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:background="@drawable/badge_background"
+            android:textColor="#FFFFFF" android:textSize="11sp" android:textStyle="bold"
+            android:paddingStart="6dp" android:paddingEnd="6dp"
+            android:paddingTop="3dp" android:paddingBottom="3dp" android:text="R31"/>
+        <TextView android:id="@+id/row1_dest" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="#FFFFFF" android:textSize="12sp" android:maxLines="1"
+            android:ellipsize="end" android:paddingStart="8dp" android:text="Jaren"/>
+        <TextView android:id="@+id/row1_time" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="#FFFFFF"
+            android:textSize="13sp" android:textStyle="bold" android:text="23:09"/>
+    </LinearLayout>
+
+    <!-- Row 2 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical"
+        android:background="@drawable/row_background" android:layout_marginTop="4dp"
+        android:paddingStart="8dp" android:paddingEnd="8dp"
+        android:paddingTop="3dp" android:paddingBottom="3dp">
+        <TextView android:id="@+id/row2_line" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:background="@drawable/badge_background"
+            android:textColor="#FFFFFF" android:textSize="11sp" android:textStyle="bold"
+            android:paddingStart="6dp" android:paddingEnd="6dp"
+            android:paddingTop="3dp" android:paddingBottom="3dp" android:text=""/>
+        <TextView android:id="@+id/row2_dest" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="#FFFFFF" android:textSize="12sp" android:maxLines="1"
+            android:ellipsize="end" android:paddingStart="8dp" android:text=""/>
+        <TextView android:id="@+id/row2_time" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="#FFFFFF"
+            android:textSize="13sp" android:textStyle="bold" android:text=""/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/widget_updated" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:textColor="#66FFFFFF"
+        android:textSize="8sp" android:layout_marginTop="4dp" android:text="22:19"/>
+
+</LinearLayout>
