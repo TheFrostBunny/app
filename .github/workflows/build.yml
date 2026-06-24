@@ -18,17 +18,13 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Last ned Gradle Wrapper
-        run: |
-          mkdir -p gradle/wrapper
-          curl -sL "https://raw.githubusercontent.com/gradle/gradle/v8.4.0/gradle/wrapper/gradle-wrapper.jar" \
-            -o gradle/wrapper/gradle-wrapper.jar
-          curl -sL "https://raw.githubusercontent.com/gradle/gradle/master/gradlew" \
-            -o gradlew
-          chmod +x gradlew
+      - name: Sett opp Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.4'
 
       - name: Bygg APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: gradle assembleDebug --stacktrace
 
       - name: Last opp APK
         uses: actions/upload-artifact@v4
